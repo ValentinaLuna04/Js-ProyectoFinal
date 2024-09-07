@@ -1,0 +1,102 @@
+[
+    {
+        "image": "./image/remeras/calavera.jpg",
+        "nombre": "Remera Oversize Calavera",
+        "precio": 15000
+    },
+    {
+        "image": "./image/bermudas/adidas.jpg",
+        "nombre": "Bermuda Estilo Adidas",
+        "precio": 23000
+    },
+    {
+        "image": "./image/remeras/costillas.jpg",
+        "nombre": "Remera Oversize Costillas",
+        "precio": 13400
+    },
+    {
+        "image": "./image/remeras/dragon.jpg",
+        "nombre": "Remera Oversize Dragon",
+        "precio": 16200
+    },
+    {
+        "image": "./image/bermudas/araña.jpg",
+        "nombre": "Bermuda Araña",
+        "precio": 26400
+    },
+    {
+        "image": "./image/bermudas/bordada.jpg",
+        "nombre": "Bermuda con estrellas bordadas",
+        "precio": 28800
+    },
+    {
+        "image": "./image/bermudas/cargo.jpg",
+        "nombre": "Bermuda Cargo + Cadena",
+        "precio": 25500
+    },
+    {
+        "image": "./image/remeras/estrellas.jpg",
+        "nombre": "Remera Oversize Estrellas",
+        "precio": 14700
+    },
+    {
+        "image": "./image/bermudas/dragon.jpg",
+        "nombre": "Bermuda Dragón",
+        "precio": 16400
+    },
+    {
+        "image": "./image/remeras/gatitos.jpg",
+        "nombre": "Remera Oversize Gatitos",
+        "precio": 15500
+    },
+    {
+        "image": "./image/remeras/gatitos2.jpg",
+        "nombre": "Remera Oversize Bath Time",
+        "precio": 15500
+    },
+    {
+        "image": "./image/bermudas/estrellas.jpg",
+        "nombre": "Bermuda Parches de Estrellas",
+        "precio": 16600
+    },
+    {
+        "image": "./image/remeras/gatobolsa.jpg",
+        "nombre": "Remera Oversize Bolsita",
+        "precio": 15800
+    },
+    {
+        "image": "./image/bermudas/nike.jpg",
+        "nombre": "Bermuda Estilo Nike",
+        "precio": 21600
+    },
+    {
+        "image": "./image/remeras/gatobolsa2.jpg",
+        "nombre": "Remera Oversize Bolsita Gris",
+        "precio": 15800
+    },
+    {
+        "image": "./image/remeras/koi.jpg",
+        "nombre": "Remera Oversize Koi",
+        "precio": 14900
+    },
+    {
+        "image": "./image/bermudas/washed.jpg",
+        "nombre": "Bermuda Washed",
+        "precio": 29000
+    },
+    {
+        "image": "./image/remeras/kuromirem.jpg",
+        "nombre": "Remera Oversize Kuromi Blanca",
+        "precio": 17200
+    },
+    {
+        "image": "./image/remeras/kuromirem.jpg",
+        "nombre": "Remera Oversize Kuromi Negra",
+        "precio": 17200
+    },
+    {
+        "image": "./image/remeras/osotoso.jpg",
+        "nombre": "Remera Oversize Oso",
+        "precio": 14000
+    }
+]

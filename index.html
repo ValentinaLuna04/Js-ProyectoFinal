@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="icon" type="icon/png" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tienda Gabru</title>
+</head>
+<body>
+    <header>
+        <h1>Gabru</h1>
+        <div class="headerContainer">
+            <div id="containerSearch">
+                <div id="containerBars">
+                    <input type="text" id="inputSearch" placeholder="Buscar...">
+                </div>
+                <i id="iconSearch" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="carroContainer">
+                <i id="imgCar" class="fa-solid fa-cart-shopping"><span id="cuentaCar">0</span></i>
+                <div id="carritoContainer">
+                    <div id="carrito"></div>
+                    <div id="total">
+                        <p id="totalCar">Precio total: $</p>
+                    </div>
+                    <div id="botonesCarrito">
+                        <button id="comprar">Finalizar compra</button>
+                        <button id="cancelar">Cancelar compra</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </header>
+    <div id="productos"></div>
+
+    <footer>
+        <nav>
+            <div id="footer1">
+                <div class="pago">
+                    <h2>MEDIOS DE PAGO</h2>
+                    <div class="icons">
+                        <i class="fa-solid fa-money-bill"></i>
+                        <i class="fa-solid fa-building-columns"></i>
+                        <i class="fa-solid fa-credit-card"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-brands fa-cc-visa"></i>
+                    </div>
+                </div>
+                <div class="redes">
+                    <h2>REDES SOCIALES</h2>
+                    <div class="icons">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="footer2">
+                <div class="envio">
+                    <h2>MEDIOS DE ENVÍO</h2>
+                    <div class="icons">
+                        <i class="fa-solid fa-truck"></i>
+                        <img src="./image/correo-argentino.png" alt="logo de correo argentino" width="50">
+                    </div>
+                </div>
+                <div class="contactoFoot">
+                    <h2>CONTACTO</h2>
+                    <div class="icons">
+                        <i class="fa-solid fa-envelope"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/1acd241252.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</body>
+</html>

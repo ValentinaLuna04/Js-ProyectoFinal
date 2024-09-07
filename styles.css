@@ -1,0 +1,235 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    scroll-behavior: smooth;
+  }
+
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*header*/
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px rgb(255, 255, 255) solid;
+}
+
+#carroContainer{
+    display: flex;
+    flex-direction: column;
+    align-self:flex-end;
+    justify-self: right;
+}
+
+h1{
+    align-self: center;
+    color: white;
+    font-size: 50px;
+    margin: 15px;
+    font-family: "Playwrite AR", cursive;
+    font-weight: 850;
+}
+
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#containerSearch{
+    display: flex;
+    margin: 10px 10px;
+}
+
+#inputSearch{
+    width: 250px;
+    height: 27px;
+    font-size: 0.9rem;
+    color: white;
+    background: none;
+    border: none;
+    border-bottom: 2px white solid;
+}
+
+#containerSearch i{
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+#containerSearch i:hover{
+    color: rgb(138, 138, 138);
+}
+
+#carroContainer i{
+    color: white;
+    font-size: 1.1rem;
+    padding: 5px;
+    margin: 10px 0;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: all 200ms
+}
+
+#carroContainer i:hover{
+    color: rgb(138, 138, 138);
+}
+
+#carroContainer i span{
+    padding-left: 3px;
+}
+
+#carritoContainer{
+    border: 1px white solid;
+}
+
+#carritoContainer{
+    position: fixed;
+    background-color: black;
+    right: -100%;
+    z-index: 999;
+    transition: right 0.5s ease;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+#carrito{
+    padding: 5px;
+    
+}
+
+.contenedorCarrito{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    padding-bottom: 5px;
+    border-bottom: 0.5px white solid;
+}
+
+.contenedorCarrito h4{
+    margin-right: 15px;
+}
+
+.contenedorCarrito p{
+    margin-right: 10px;
+}
+
+#botonesCarrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+#botonesCarrito button{
+    padding: 5px;
+    cursor: pointer;
+    transition: all 400ms
+}
+
+#botonesCarrito button:hover{
+    background-color: rgb(167, 167, 167);
+}
+
+#total{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+/*Productos*/
+
+#productos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.contenedorCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border: 1.5px rgb(15, 15, 15) solid;
+    border-radius: 5px;
+}
+
+.contenedorCard img{
+    width: 280px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.contenedorCard h3{
+    padding: 10px;
+}
+
+.contenedorCard p{
+    padding: 0 10px 10px 10px;
+}
+
+.contenedorCard button{
+    align-self: center;
+    font-size: 1rem;
+    padding: 3px;
+    width: 95%;
+    cursor: pointer;
+    transition: all 400ms
+}
+
+.contenedorCard button:hover{
+    background-color: rgb(167, 167, 167);
+}
+
+/*Footer*/
+
+footer{
+    padding: 10px 5px 0 5px;
+    border-top: 1px rgb(255, 255, 255) solid;
+}
+
+#footer1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 0px 10px 0px;
+}
+
+.pago{
+    margin-left: 20px;
+}
+
+.redes{
+    margin-right: 20px;
+}
+
+#footer2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 0px 10px 0px;
+}
+
+.envio{
+    margin-left: 20px;
+}
+
+.contactoFoot{
+    margin-right: 97px;
+}

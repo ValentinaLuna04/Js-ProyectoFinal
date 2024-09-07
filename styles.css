@@ -92,21 +92,26 @@ h1{
 
 #carritoContainer{
     border: 1px white solid;
-}
-
-#carritoContainer{
     position: fixed;
     background-color: black;
     right: -100%;
     z-index: 999;
-    transition: right 0.5s ease;
+    transition: right 1s ease;
     overflow-y: auto;
     scrollbar-width: none;
 }
 
+.close{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#carritoContainer .close i{
+    margin: 5px 5px 0 5px;
+}
+
 #carrito{
     padding: 5px;
-    
 }
 
 .contenedorCarrito{
@@ -140,6 +145,11 @@ h1{
 
 #botonesCarrito button:hover{
     background-color: rgb(167, 167, 167);
+}
+
+#botonesCarrito #comprar a{
+    text-decoration: none;
+    color: black;
 }
 
 #total{

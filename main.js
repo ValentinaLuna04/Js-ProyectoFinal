@@ -1,3 +1,4 @@
+//Variables
 const URL = "./productos.json"
 const productos = document.getElementById("productos")
 const carritoDOM = document.getElementById("carrito")
@@ -6,9 +7,10 @@ const cancelar = document.getElementById("cancelar")
 const total = document.getElementById("totalCar")
 const cuentaCar = document.getElementById("cuentaCar")
 const imgCar = document.getElementById("imgCar")
+const closeButton = document.getElementById("closeButton")
 const carritoContainer = document.getElementById("carritoContainer")
 const input = document.getElementById("inputSearch")
-let carrito = JSON.parse(localStorage.getItem("carritoDOM")) || []
+let carrito = JSON.parse(localStorage.getItem("carrito")) || []
 
 //Carrito
 
@@ -39,14 +41,14 @@ let carrito = JSON.parse(localStorage.getItem("carritoDOM")) || []
 
 
 function actualizadora (){
-    localStorage.setItem("carritoDOM", JSON.stringify(carrito))
+    localStorage.setItem("carrito", JSON.stringify(carrito))
     carritoDOM.innerHTML = ""
     carrito.forEach(el => {
         carritoDOM.innerHTML += `
             <div class="contenedorCarrito"> 
                 <h4>${el.producto}</h4>
                 <p>${el.precio}</p>
-                <p>${el.cantidad}</p>
+                <p>${el.cantidad  || 1}</p>
             </div>
         `
     })
@@ -61,14 +63,14 @@ comprar.addEventListener("click", (e)=>{
 
 cancelar.addEventListener("click", (e)=>{
     carrito = []
-    localStorage.setItem("carritoDOM", JSON.stringify(carrito))
+    localStorage.setItem("carrito", JSON.stringify(carrito))
     carritoContainer.style.right = "-100%";
     actualizadora()
 })
 
 const numeroCar = ()=>{
     const cuenta = carrito.reduce((acc, el) => {
-        return acc + el.cantidad
+        return acc + el.cantidad 
     },0)
     cuentaCar.innerText = cuenta
 }
@@ -82,7 +84,13 @@ const totalNum = ()=>{
 
 imgCar.addEventListener("click", (e)=>{
     carritoContainer.style.right = 0;
-    carritoContainer.style.top = "35%"
+    carritoContainer.style.top = "30%";
+    carritoContainer.style.transition = "right 2s ease"
+})
+
+closeButton.addEventListener("click", ()=>{
+    carritoContainer.style.right = "-100%";
+    carritoContainer.style.transition = "right 2s ease"
 })
 
 //Cards
@@ -144,5 +152,5 @@ document.addEventListener("DOMContentLoaded", (e)=>{
 })
 
 const sincronizarStorage = ()=>{
-    localStorage.setItem("carritoDOM", JSON.stringify(carrito))
+    localStorage.setItem("carrito", JSON.stringify(carrito))
 }

@@ -16,25 +16,41 @@
         <div id="finalizar">
             <form action="" method="POST" id="form">
                 <div class="form">
-                    <h2>Contacto</h2>
-                    <div class="grupo">
-                        <label for="">Nombre</label>
-                        <input type="text" name="" id="name" ><span class="barra"></span>
+                    <h2><b>Contacto</b></h2>
+                    <div class="grupo" id="grupo-nombre">
+                        <label for="name">Nombre y Apellido</label>
+                        <div class="grupoInput">
+                            <input type="text" name="nombre" id="name" class="grupoInput">
+                            <i class="formValidacion fa-solid fa-check"></i>
+                        </div>
+                        <p class="warnings" id="warnings">Necesito tu nombre completo aquí, por favor (Debe tener de 8 a más caracteres).</p>
                     </div>
-                    <div class="grupo">
-                        <label for="">Número Telefónico</label>
-                        <input type="tel" name="" id="tel" ><span class="barra"></span> 
+                    <div class="grupo" id="grupo-telefono">
+                        <label for="tel">Número Telefónico</label>
+                        <div class="grupoInput">
+                            <input type="tel" name="telefono" id="telefono" class="grupoInput">
+                            <i class="formValidacion fa-solid fa-check"></i>
+                        </div>
+                        <p class="warnings" id="warnings">Ese de verdad es un número telefónico? (Debe tener de 10 caracteres)</p> 
                     </div>
-                    <div class="grupo">
-                        <label for="">Email</label>
-                        <input type="email" name="" id="email" ><span class="barra"></span>
+                    <div class="grupo" id="grupo-mail">
+                        <label for="email">Email</label>
+                        <div class="grupoInput">
+                            <input type="email" name="mail" id="email" class="grupoInput">
+                            <i class="formValidacion fa-solid fa-check"></i>
+                        </div>
+                        <p class="warnings" id="warnings">El mail no es válido.</p>
+                    </div>
+                    <div class="mensajeForm" id="mensajeForm">
+                        <p><i class="fa-solid fa-triangle-exclamation"></i> Necesito que completes tus datos!</p>
                     </div>
                     <button type="submit" id="finalCompra">Finalizar Compra</button>
-                    <p class="warnings" id="warnings"></p>
                 </div>
             </form>
         </div>      
     </main>
+    <script src="https://kit.fontawesome.com/1acd241252.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="finalizar.js"></script>
 </body>
 </html>

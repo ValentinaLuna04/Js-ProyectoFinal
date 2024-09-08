@@ -19,14 +19,14 @@ main{
     background-color: black;
     display: flex;
     justify-content: center;
-    margin: 15vh;
+    margin: 10vh;
 }
 
 #finalizar{
     background-color: rgb(216, 216, 216);
     color: black;
-    width: 350px;
-    height: 400px;
+    width: 70vh;
+    height: 80vh;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -46,35 +46,101 @@ main{
     
 }
 
+.form h2{
+    font-size: 1.7rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
 .grupo{
     display: flex;
     flex-direction: column;
+}
+
+.grupoIncorrecto label{
+    color: rgb(173, 0, 0);
+}
+
+.grupoIncorrecto input{
+    border: 2px solid rgb(173, 0, 0);
 }
 
 .grupo label{
     margin-bottom: 10px;
 }
 
+.grupoInput{
+    position: relative;
+}
 
 .grupo input{
-    width: 130%;
+    width: 250px;
     height: 30px;
     padding: 5px;
     align-self: center;
+    line-height: 30px;
+}
+
+.grupo input:focus{
+    box-shadow: 8px solid rgb(63, 63, 63);
+    outline: none;
+}
+
+.grupo .formValidacion{
+    position: absolute;
+    font-size: 16px;
+    right: 10px;
+    top: 7px;
+    z-index: 100;
+    opacity: 0;
+}
+
+.grupoCorrecto .formValidacion{
+    color: green;
+    opacity: 1;
 }
 
 #finalCompra{
-    width: 150px;
+    width: 70%;
     padding: 12px;
     font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 400ms
+}
+
+#finalCompra:hover{
+    outline: 0;
+    background-color: rgb(167, 167, 167);
 }
 
 
 
-.warning{
-    width: 200px;
+.warnings{
+    display: none;
+    font-size: 15px;
     text-align: center;
     margin: auto;
     color: rgb(173, 0, 0);
-    padding-top: 20px;
+    padding-top: 10px;
+}
+
+.warningsActivas{
+    display: block;
+}
+
+.mensajeForm{
+    height: 40px;
+    background-color: rgb(206, 25, 25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    border-radius: 3px;
+    display: none;
+}
+
+.mensajeFormActivo{
+    display: flex;
+    justify-content: center;
 }

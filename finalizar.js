@@ -1,31 +1,92 @@
+//import "./main";
+
+//Objetos
+const expresiones = {
+    nombre: /^[a-zA-ZÀ-ÿ\s]{8,40}$/,
+    numero: /^\d{10,14}$/,
+    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+}
+
+const campos = {
+    nombre: false,
+    telefono: false,
+    mail: false,
+}
+
 //Variables Finalizar
-const names = document.getElementById("name")
-const tel = document.getElementById("tel")
-const mail = document.getElementById("mail")
 const form = document.getElementById("form")
-const parrafo = document.getElementById("warning")
+const inputs = document.querySelectorAll("#form input")
 
-form.addEventListener("submit", (e)=>{
+
+//Funcionalidades
+function enviarDatos(){
+    Swal.fire({
+        showConfirmButton: false,
+        title: "Muchas gracias por comprar en nuestra tienda!",
+        text: "En breve te llegarán los detalles de tu compra a tu mail y por tu número acordaremos el envío y el pago!",
+        timer: 6000,
+        imageUrl: "https://i.pinimg.com/564x/32/4b/5f/324b5f47fa41d1a78f67acd073c95f9c.jpg",
+        timerProgressBar: true,
+        imageHeight: "250px",
+        background: "#292929",
+        color: "#ffffff",
+    })
+}
+
+function redirigir() {
+    setTimeout(() => {
+        window.location.href = './index.html';
+    }, 6000);
+    //carrito = []
+    //localStorage.setItem("carrito", JSON.stringify(carrito))
+    //actualizadora()
+}
+
+const validarCampo = (expresion, input, campo)=>{
+    if (expresion.test(input.value)) {
+        document.getElementById(`grupo-${campo}`).classList.remove("grupoIncorrecto")
+        document.getElementById(`grupo-${campo}`).classList.add("grupoCorrecto")
+        document.querySelector(`#grupo-${campo} .warnings`).classList.remove("warningsActivas")
+        campos[campo] = true
+
+    } else {
+        document.getElementById(`grupo-${campo}`).classList.remove("grupoCorrecto")
+        document.getElementById(`grupo-${campo}`).classList.add("grupoIncorrecto")
+        document.querySelector(`#grupo-${campo} .warnings`).classList.add("warningsActivas")
+        campos[campo] = false
+    }
+}
+
+const validar = (e)=>{
+    switch(e.target.name){
+        case "nombre":
+            validarCampo(expresiones.nombre, e.target, `nombre`)
+        break
+        case "telefono":
+            validarCampo(expresiones.numero, e.target, `telefono`)
+        break
+        case "mail":
+            validarCampo(expresiones.correo, e.target, `mail`)
+        break
+    }
+}
+
+inputs.forEach((input)=>{
+    input.addEventListener("keyup", validar)
+    input.addEventListener("blur", validar)
+})
+
+form.addEventListener("submit", (e) =>{
     e.preventDefault()
-    let warnings = ""
-    let entrar = false
-    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
-    if(names.value.length <6){
-        warnings += `El nombre no es valido <br>`
-        entrar = true
+    if (campos.nombre && campos.telefono && campos.mail) {
+        form.reset()
+        redirigir()
+        document.querySelectorAll(".grupoCorrecto").forEach((icono)=>{
+            icono.classList.remove("grupoCorrecto")
+        })
+        enviarDatos()
+    } else {
+        document.getElementById("mensajeForm").classList.add("mensajeFormActivo")
     }
-    if(!regexEmail.test(mail.value)){
-        warnings += `El email no es valido <br>`
-        entrar = true
-    }
-    if(tel.value.length < 8){
-        warnings += `La contraseña no es valida <br>`
-        entrar = true
-    }
-
-    if(entrar){
-        parrafo.innerHTML = warnings
-    }else{
-        parrafo.innerHTML = "Enviado"
-    }
+    
 })

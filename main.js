@@ -29,9 +29,33 @@ function actualizadora (){
     totalNum()
 }
 
+function redirigir() {
+    window.location.href = './finalizar.html';
+}
+
+function nadaEnCarrito(){
+    Swal.fire({
+        showConfirmButton: false,
+        title: "Debes tener algo en el carrito para eso.",
+        timer: 3000,
+        imageUrl: "https://i.pinimg.com/564x/b1/29/c3/b129c3c44135603f0ef80f8a99dc78e1.jpg",
+        timerProgressBar: true,
+        imageHeight: "250px",
+        background: "#292929",
+        color: "#ffffff",
+    })
+}
+
+
 comprar.addEventListener("click", (e)=>{
-    carrito = []
-    actualizadora()
+    const cuenta = carrito.reduce((acc, el) => {
+        return acc + el.cantidad 
+    },0)
+    if ( cuenta === 0) {
+        nadaEnCarrito();
+    } else {
+        redirigir()
+    }
 })
 
 function triste(){

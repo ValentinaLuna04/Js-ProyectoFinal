@@ -19,15 +19,21 @@ main{
     background-color: black;
     display: flex;
     justify-content: center;
-    margin: 10%;
+    margin: 15vh;
 }
 
 #finalizar{
     background-color: rgb(216, 216, 216);
     color: black;
-    width: 40%;
-    height: 80%;
+    width: 350px;
+    height: 400px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 10px 10px 5px rgba(31, 31, 31, 0.685);
+    border-radius: 5px;
 }
 
 .form{
@@ -35,6 +41,9 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    gap: 15px;
+    
 }
 
 .grupo{
@@ -42,9 +51,22 @@ main{
     flex-direction: column;
 }
 
+.grupo label{
+    margin-bottom: 10px;
+}
+
 
 .grupo input{
     width: 130%;
+    height: 30px;
+    padding: 5px;
+    align-self: center;
+}
+
+#finalCompra{
+    width: 150px;
+    padding: 12px;
+    font-size: 15px;
 }
 
 

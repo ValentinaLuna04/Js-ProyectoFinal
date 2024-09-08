@@ -54,6 +54,7 @@ h1{
 #inputSearch{
     width: 250px;
     height: 27px;
+    padding: 5px;
     font-size: 0.9rem;
     color: white;
     background: none;

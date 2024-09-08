@@ -5,7 +5,7 @@ const mail = document.getElementById("mail")
 const form = document.getElementById("form")
 const parrafo = document.getElementById("warning")
 
-form.addEventListener("submit", e=>{
+form.addEventListener("submit", (e)=>{
     e.preventDefault()
     let warnings = ""
     let entrar = false

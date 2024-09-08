@@ -34,6 +34,7 @@ function enviarDatos(){
 function redirigir() {
     setTimeout(() => {
         window.location.href = './index.html';
+        localStorage.clear()
     }, 6000);
 }
 

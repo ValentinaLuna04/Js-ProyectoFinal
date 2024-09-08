@@ -85,6 +85,7 @@ cancelar.addEventListener("click", (e)=>{
         triste()
     }
     
+    
 })
 
 const numeroCar = ()=>{

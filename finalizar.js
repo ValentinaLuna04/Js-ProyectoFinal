@@ -1,5 +1,3 @@
-//import "./main";
-
 //Objetos
 const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{8,40}$/,
@@ -13,7 +11,7 @@ const campos = {
     mail: false,
 }
 
-//Variables Finalizar
+//Variables
 const form = document.getElementById("form")
 const inputs = document.querySelectorAll("#form input")
 
@@ -37,9 +35,6 @@ function redirigir() {
     setTimeout(() => {
         window.location.href = './index.html';
     }, 6000);
-    //carrito = []
-    //localStorage.setItem("carrito", JSON.stringify(carrito))
-    //actualizadora()
 }
 
 const validarCampo = (expresion, input, campo)=>{

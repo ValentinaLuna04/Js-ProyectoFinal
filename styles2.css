@@ -19,14 +19,14 @@ main{
     background-color: black;
     display: flex;
     justify-content: center;
-    margin: 10vh;
+    margin: 6vh;
 }
 
 #finalizar{
     background-color: rgb(216, 216, 216);
     color: black;
     width: 70vh;
-    height: 80vh;
+    height: 85vh;
     padding: 20px;
     display: flex;
     flex-direction: column;

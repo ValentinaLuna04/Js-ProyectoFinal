@@ -18,7 +18,7 @@
                 <div id="containerBars">
                     <input type="text" id="inputSearch" placeholder="Buscar...">
                 </div>
-                <i id="iconSearch" class="fa-solid fa-magnifying-glass"></i>
+                <i id="iconSearch" for="inputSearch" class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div id="carroContainer">
                 <i id="imgCar" class="fa-solid fa-cart-shopping"><span id="cuentaCar">0</span></i>
@@ -31,8 +31,8 @@
                         <p id="totalCar">Precio total: $</p>
                     </div>
                     <div id="botonesCarrito">
-                        <button id="comprar"> <a href="./finalizar.html">Iniciar compra</a></button>
-                        <button id="cancelar">Cancelar compra</button>
+                        <button id="comprar"><a href="./finalizar.html">Iniciar Compra</a></button>
+                        <button id="cancelar">Vaciar carrito</button>
                     </div>
                 </div>
             </div>
@@ -82,6 +82,7 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/1acd241252.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="main.js" defer></script>
 </body>
 </html>

@@ -12,33 +12,6 @@ const carritoContainer = document.getElementById("carritoContainer")
 const input = document.getElementById("inputSearch")
 let carrito = JSON.parse(localStorage.getItem("carrito")) || []
 
-//Carrito
-
-/*const agregarEventosCarrito = () => {
-    const botonesAgregar = document.getElementsByClassName("botonComprar")
-    const botonesAgregarArray = Array.from(botonesAgregar)
-    botonesAgregarArray.forEach(el=>{
-        el.addEventListener("click", (e)=>{
-            let id;
-            const productoEnElCarrito = carrito.find((el, idArr) => {
-                id = idArr
-                return el.producto == e.target.parentElement.children[1].innerText
-            })
-            if(e.target.innerText === "+"){
-                productoEnElCarrito.cantidad++
-            }else{
-                if(productoEnElCarrito.cantidad == 1){
-                    carrito.splice(id, 1)
-                }else{
-                    productoEnElCarrito.cantidad--
-                }
-            }
-            actualizadora()
-        })
-    })
-}*/
-
-
 
 function actualizadora (){
     localStorage.setItem("carrito", JSON.stringify(carrito))
@@ -48,7 +21,7 @@ function actualizadora (){
             <div class="contenedorCarrito"> 
                 <h4>${el.producto}</h4>
                 <p>${el.precio}</p>
-                <p>${el.cantidad  || 1}</p>
+                <p>${el.cantidad}</p>
             </div>
         `
     })
@@ -61,11 +34,25 @@ comprar.addEventListener("click", (e)=>{
     actualizadora()
 })
 
+function triste(){
+    Swal.fire({
+        showConfirmButton: false,
+        title: "Bueno, vuelve pronto...",
+        timer: 3000,
+        imageUrl: "https://i.pinimg.com/564x/a4/33/07/a433074ce20d1323398c51f555f4cdb8.jpg",
+        timerProgressBar: true,
+        imageHeight: "250px",
+        background: "#292929",
+        color: "#ffffff",
+    })
+}
+
 cancelar.addEventListener("click", (e)=>{
     carrito = []
     localStorage.setItem("carrito", JSON.stringify(carrito))
     carritoContainer.style.right = "-100%";
     actualizadora()
+    triste()
 })
 
 const numeroCar = ()=>{
@@ -94,28 +81,44 @@ closeButton.addEventListener("click", ()=>{
 })
 
 //Cards
+function alert(){
+    Swal.fire({
+        showConfirmButton: false,
+        toast: true,
+        title: "Agregaste un producto al carrito!",
+        timer: 2000,
+        position: "bottom-end",
+        imageUrl: "https://i.pinimg.com/564x/5c/0c/57/5c0c575e3f7f3bad4ad6449c22078fd9.jpg",
+        width: "250px",
+        imageHeight: "170px",
+        background: "#292929",
+        color: "#ffffff",
+    })
+}
+
 const agregadoraEventos = ()=>{
     const agregarBotones = document.getElementsByClassName("botonCompra")
     const arrayBotones = Array.from(agregarBotones)
     arrayBotones.forEach ((el)=>{
         el.addEventListener("click", (e)=>{
-            const productoCarrito = carrito.find(el => el.producto == e.target.parentElement.children[1].innerText)
+            const productoNombre = e.target.parentElement.children[1].innerText
+            const precioRaw =  e.target.parentElement.children[2].innerText
+            const precioProducto = parseFloat(precioRaw.replace("$", "").trim())
+            const productoCarrito = carrito.find(el => el.producto === productoNombre)
             if (!productoCarrito) {
                 carrito.push({
                 producto: e.target.parentElement.children[1].innerText,
-                precio: e.target.parentElement.children[2].innerText,
+                precio: precioProducto,
                 cantidad: 1
                 })
             }else{
                 productoCarrito.cantidad++
             }
             actualizadora()
+            alert()
         })
     })
 }
-
-
-
 
 const creadorCards = (image, nombre, precio) =>{
     productos.innerHTML += `

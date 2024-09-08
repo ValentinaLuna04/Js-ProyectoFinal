@@ -72,11 +72,19 @@ function triste(){
 }
 
 cancelar.addEventListener("click", (e)=>{
-    carrito = []
-    localStorage.setItem("carrito", JSON.stringify(carrito))
-    carritoContainer.style.right = "-100%";
-    actualizadora()
-    triste()
+    const cuenta = carrito.reduce((acc, el) => {
+        return acc + el.cantidad 
+    },0)
+    if (cuenta === 0) {
+        nadaEnCarrito()
+    } else {
+        carrito = []
+        localStorage.setItem("carrito", JSON.stringify(carrito))
+        carritoContainer.style.right = "-100%";
+        actualizadora()
+        triste()
+    }
+    
 })
 
 const numeroCar = ()=>{

@@ -16,14 +16,14 @@
         <div id="finalizar">
             <form action="" method="POST" id="form">
                 <div class="form">
-                    <h2><b>Contacto</b></h2>
+                    <h2><b>Datos</b></h2>
                     <div class="grupo" id="grupo-nombre">
                         <label for="nombre">Nombre y Apellido</label>
                         <div class="grupoInput">
                             <input type="text" name="nombre" id="nombre" class="grupoInput">
                             <i class="formValidacion fa-solid fa-check"></i>
                         </div>
-                        <p class="warnings" id="warnings">Necesito tu nombre completo aquí, por favor (Debe tener de 8 a más caracteres).</p>
+                        <p class="warnings" id="warnings">Necesito tu nombre completo aquí, por favor<br>(Debe tener de 8 a más caracteres).</p>
                     </div>
                     <div class="grupo" id="grupo-telefono">
                         <label for="elefono">Número Telefónico</label>
@@ -31,7 +31,7 @@
                             <input type="tel" name="telefono" id="telefono" class="grupoInput">
                             <i class="formValidacion fa-solid fa-check"></i>
                         </div>
-                        <p class="warnings" id="warnings">Ese de verdad es un número telefónico? (Debe tener de 10 caracteres)</p> 
+                        <p class="warnings" id="warnings">Ese de verdad es un número telefónico?<br>(Debe tener de 10 a más caracteres)</p> 
                     </div>
                     <div class="grupo" id="grupo-mail">
                         <label for="email">Email</label>
@@ -47,6 +47,7 @@
                     <button type="submit" id="finalCompra">Finalizar Compra</button>
                 </div>
             </form>
+            <button id="cancelarCompra">Cancelar Compra</button>
         </div>      
     </main>
     <script src="https://kit.fontawesome.com/1acd241252.js" crossorigin="anonymous"></script>

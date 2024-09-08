@@ -14,6 +14,7 @@ const campos = {
 //Variables
 const form = document.getElementById("form")
 const inputs = document.querySelectorAll("#form input")
+const cancelarCompra = document.getElementById("cancelarCompra")
 
 
 //Funcionalidades
@@ -85,4 +86,29 @@ form.addEventListener("submit", (e) =>{
         document.getElementById("mensajeForm").classList.add("mensajeFormActivo")
     }
     
+})
+
+function triste(){
+    Swal.fire({
+        showConfirmButton: false,
+        title: "Bueno, vuelve pronto...",
+        timer: 3000,
+        imageUrl: "https://i.pinimg.com/564x/01/a8/38/01a838eddd5a4b41f3d2a488d51b945d.jpg",
+        timerProgressBar: true,
+        imageHeight: "250px",
+        background: "#292929",
+        color: "#ffffff",
+    })
+}
+
+function cancelado() {
+    setTimeout(() => {
+        window.location.href = './index.html';
+        localStorage.clear()
+    }, 3000);
+}
+
+cancelarCompra.addEventListener("click", ()=>{
+    triste()
+    cancelado()
 })

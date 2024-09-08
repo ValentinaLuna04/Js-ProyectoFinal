@@ -13,6 +13,7 @@ const input = document.getElementById("inputSearch")
 let carrito = JSON.parse(localStorage.getItem("carrito")) || []
 
 
+//Carrito
 function actualizadora (){
     localStorage.setItem("carrito", JSON.stringify(carrito))
     carritoDOM.innerHTML = ""
@@ -21,7 +22,9 @@ function actualizadora (){
             <div class="contenedorCarrito"> 
                 <h4>${el.producto}</h4>
                 <p>${el.precio}</p>
+                <button class="sumar">+</button>
                 <p>${el.cantidad}</p>
+                <button class="restar">-</button>
             </div>
         `
     })

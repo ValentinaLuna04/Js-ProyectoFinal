@@ -21,8 +21,8 @@ function actualizadora (){
         carritoDOM.innerHTML += `
             <div class="contenedorCarrito"> 
                 <h4>${el.producto}</h4>
-                <p>${el.cantidad}</p>
                 <p>$${el.precio}</p>
+                <p>${el.cantidad}</p>
             </div>
         `
     })

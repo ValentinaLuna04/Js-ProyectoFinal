@@ -44,6 +44,7 @@ main{
     text-align: center;
     gap: 15px;
     width: 100%;
+    height: 100%;
     margin: auto;
     
 }
@@ -106,7 +107,6 @@ main{
     width: 70%;
     padding: 12px;
     font-size: 15px;
-    margin-top: 10px;
     cursor: pointer;
     border: 0.5px solid;
     transition: all 400ms;
@@ -165,4 +165,28 @@ main{
 #cancelarCompra:hover{
     outline: 0;
     background-color: rgb(177, 177, 177);
+}
+
+.pagoContainer{
+    align-self: flex-start;
+}
+
+#grupoPago{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 8px;
+}
+
+#grupoPago label{
+    display: flex;
+}
+
+
+#grupoPago label .checkForm{
+    width: 20px;
+    height: 15px;
+    margin: 0 5px;
 }

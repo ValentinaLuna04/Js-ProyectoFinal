@@ -73,9 +73,12 @@ inputs.forEach((input)=>{
     input.addEventListener("blur", validar)
 })
 
+
+
 form.addEventListener("submit", (e) =>{
     e.preventDefault()
-    if (campos.nombre && campos.telefono && campos.mail) {
+    const metodoPago = document.getElementById("pago")
+    if (campos.nombre && campos.telefono && campos.mail && metodoPago.checked) {
         form.reset()
         redirigir()
         document.querySelectorAll(".grupoCorrecto").forEach((icono)=>{

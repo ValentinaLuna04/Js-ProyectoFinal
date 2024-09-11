@@ -15,6 +15,7 @@ body{
     justify-content: center;
 }
 
+/*Finalizar*/
 main{
     background-color: black;
     display: flex;
@@ -189,4 +190,47 @@ main{
     width: 20px;
     height: 15px;
     margin: 0 5px;
+}
+
+/*Error*/
+.errorMain{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.errorMain img{
+    width: 60vh;
+}
+
+.errorMain h1{
+    font-size: 2.7rem;
+    margin: 15px 0 10px 0;
+    
+}
+
+.errorMain h2{
+    font-size: 1.8rem;
+}
+
+.errorMain p{
+    font-size: 1.5rem;
+}
+
+.footerError{
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-items: baseline;
+    justify-content: center;
+
+}
+
+.footerError p{
+    margin: 0 10px 0 10px;
+    align-self: center;
+}
+
+.footerError img{
+    width: 35px;
 }

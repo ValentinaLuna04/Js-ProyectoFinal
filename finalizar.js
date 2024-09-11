@@ -22,7 +22,7 @@ function enviarDatos(){
     Swal.fire({
         showConfirmButton: false,
         title: "Muchas gracias por comprar en nuestra tienda!",
-        text: "En breve te llegarán los detalles de tu compra a tu mail y por tu número acordaremos el envío y el pago!",
+        text: "En breve te llegarán los detalles de tu compra a tu mail y por tu número acordaremos el envío y el pago.",
         timer: 6000,
         imageUrl: "https://i.pinimg.com/564x/32/4b/5f/324b5f47fa41d1a78f67acd073c95f9c.jpg",
         timerProgressBar: true,
@@ -34,7 +34,7 @@ function enviarDatos(){
 
 function redirigir() {
     setTimeout(() => {
-        window.location.href = './index.html';
+        window.location.href = '../index.html';
         localStorage.clear()
     }, 6000);
 }
@@ -106,7 +106,7 @@ function triste(){
 
 function cancelado() {
     setTimeout(() => {
-        window.location.href = './index.html';
+        window.location.href = '../index.html';
         localStorage.clear()
     }, 3000);
 }

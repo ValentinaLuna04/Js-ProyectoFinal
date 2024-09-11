@@ -31,7 +31,7 @@ function actualizadora (){
 }
 
 function redirigir() {
-    window.location.href = './finalizar.html';
+    window.location.href = './html/finalizar.html';
 }
 
 function nadaEnCarrito(){
@@ -166,10 +166,19 @@ const creadorCards = (image, nombre, precio) =>{
     agregadoraEventos()
 }
 
-const llamadoraDeProductos = async ()=>{
-    let resp = await fetch(URL)
-    let data = await resp.json()
+function errorRedirigir() {
+    window.location.href = './html/error.html';
+}
 
+const llamadoraDeProductos = async ()=>{
+    let data = undefined;
+    try {
+        let resp = await fetch(URL)
+        data = await resp.json()
+
+    } catch (error) {
+        errorRedirigir()
+    }
     data.forEach(el => {
         creadorCards(el.image, el.nombre, el.precio)
     });
